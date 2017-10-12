@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const fs = require('fs');
 
-const entriesPath = path.resolve(__dirname, './entries');
+const entriesPath = path.resolve('./src/client/entries');
 const entries = fs
   .readdirSync(entriesPath)
   .filter(filename => /tsx?$/.test(filename));
@@ -14,7 +14,7 @@ module.exports = {
   }), {}),
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, '../../public/assets'),
+    path: path.resolve('./public/assets'),
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],

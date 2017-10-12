@@ -3,7 +3,7 @@ import { devMiddleware } from 'koa-webpack-middleware'
 import * as webpack from 'webpack';
 
 import config from './config';
-import * as webpackConfig from '../../src/client/webpack.config.js';
+import * as webpackConfig from '../client/webpack.config.js';
 
 export default () => {
   const app = new Koa();
